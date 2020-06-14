@@ -17,7 +17,7 @@ end
 
 execute "mysql -u root -p#{MYSQL_ROOT_PASS} -e \"CREATE DATABASE #{DB_NAME};\"" do
   user "root"
-  only_if "mysql -u root -e 'show databases' | grep #{DB_NAME}"
+  not_if "mysql -u root -p#{MYSQL_ROOT_PASS} -e 'show databases' | grep #{DB_NAME}"
 end
 
 execute "cd #{HOME_DIR}/rails_itamae_sample; #{RBENV_PATH}/rbenv exec bundle exec unicorn_rails -c config/unicorn.rb -E development -D" do

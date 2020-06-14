@@ -1,4 +1,3 @@
-=begin
 HOME_DIR = "/home/ubuntu"
 RBENV_DIR = "#{HOME_DIR}/.rbenv"
 RBENV_PATH = "#{RBENV_DIR}/bin"
@@ -28,4 +27,15 @@ execute "#{RBENV_PATH}/rbenv install 2.3.1" do
   not_if "test -d #{RBENV_DIR}/versions/2.3.1"
   user "ubuntu"
 end
-=end
+
+execute "#{RBENV_PATH}/rbenv rehash" do
+  user "ubuntu"
+end
+
+execute "#{RBENV_PATH}/rbenv global 2.3.1" do
+  user "ubuntu"
+end
+
+execute "#{RBENV_PATH}/rbenv exec gem install bundler"
+  user "ubuntu"
+end

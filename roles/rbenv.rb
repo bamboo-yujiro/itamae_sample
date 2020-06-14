@@ -36,6 +36,10 @@ execute "#{RBENV_PATH}/rbenv global 2.3.1" do
   user "ubuntu"
 end
 
-execute "#{RBENV_PATH}/rbenv exec gem install bundler"
+execute "#{RBENV_PATH}/rbenv exec gem update --system" do
+  user "ubuntu"
+end
+
+execute "#{RBENV_PATH}/rbenv exec gem install bundler" do
   user "ubuntu"
 end

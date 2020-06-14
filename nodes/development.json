@@ -1,6 +1,7 @@
 {
   "recipes": [
     "./roles/rbenv.rb",
-    "./roles/mysql.rb"
+    "./roles/mysql.rb",
+    "./roles/nginx.rb"
   ]
 }

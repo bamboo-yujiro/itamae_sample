@@ -1,4 +1,3 @@
-=begin
 MYSQL_ROOT_PASS = "yjro_tkym"
 
 package "mysql-client"
@@ -40,4 +39,3 @@ execute "mysql_secure_installation" do
       mysql -u root -p#{MYSQL_ROOT_PASS} -e "FLUSH PRIVILEGES;"
   EOL
 end
-=end

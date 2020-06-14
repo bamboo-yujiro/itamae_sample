@@ -1,4 +1,3 @@
-=begin
 HOME_DIR = "/home/ubuntu"
 RBENV_DIR = "#{HOME_DIR}/.rbenv"
 RBENV_PATH = "#{RBENV_DIR}/bin"
@@ -44,4 +43,3 @@ end
 execute "#{RBENV_PATH}/rbenv exec gem install bundler" do
   user "ubuntu"
 end
-=end

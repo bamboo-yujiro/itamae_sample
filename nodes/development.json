@@ -2,6 +2,7 @@
   "recipes": [
     "./roles/rbenv.rb",
     "./roles/mysql.rb",
+    "./roles/rails.rb",
     "./roles/nginx.rb"
   ]
 }

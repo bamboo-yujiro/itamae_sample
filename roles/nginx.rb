@@ -1,3 +1,4 @@
+=begin
 package "nginx"
 
 template "/etc/nginx/nginx.conf" do
@@ -11,3 +12,4 @@ end
 execute "restart nginx"  do
   command '/etc/init.d/nginx restart'
 end
+=end

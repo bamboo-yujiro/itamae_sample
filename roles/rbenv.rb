@@ -24,5 +24,6 @@ git "#{RBENV_DIR}/plugins/ruby-update" do
 end
 
 execute "#{RBENV_PATH}/rbenv install 2.3.1" do
+  not_if "test -d #{RBENV_DIR}/versions/2.3.1"
   user "ubuntu"
 end
